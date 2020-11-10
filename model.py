@@ -95,4 +95,4 @@ def test_YOLOv1(S=7, B=2, C=20):
     # print(model(x).shape)
     print(summary(model, x, batch_size=2, show_input=True))
 
-test_YOLOv1()
+# test_YOLOv1()
