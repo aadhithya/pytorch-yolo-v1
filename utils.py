@@ -59,6 +59,9 @@ def nonmax_suppression(bboxes, iou_threshold, prob_threshold, box_format="midpoi
 
     while bboxes:
         chosen_box = boxes.pop(0)
+
+        # * keep boxes that don't belong to the same class as chosen_box or 
+        # * add the boxes if the iou with chosen box is  less than threshold
         bboxes = [
             box for box in bboxes
             if box[0] != chosen_box or
